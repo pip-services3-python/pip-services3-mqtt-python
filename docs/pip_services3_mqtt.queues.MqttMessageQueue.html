@@ -1,0 +1,534 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>pip_services3_mqtt.queues.MqttMessageQueue module &mdash; pip-services3-mqtt  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="pip_services3_mqtt.queues package" href="pip_services3_mqtt.queues.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pip-services3-mqtt
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">pip_services3_mqtt</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="pip_services3_mqtt.html">pip_services3_mqtt package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="pip_services3_mqtt.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="pip_services3_mqtt.build.html">pip_services3_mqtt.build package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pip_services3_mqtt.connect.html">pip_services3_mqtt.connect package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="pip_services3_mqtt.queues.html">pip_services3_mqtt.queues package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pip_services3_mqtt.html#module-pip_services3_mqtt">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pip-services3-mqtt</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">pip_services3_mqtt</a> &raquo;</li>
+        
+          <li><a href="pip_services3_mqtt.html">pip_services3_mqtt package</a> &raquo;</li>
+        
+          <li><a href="pip_services3_mqtt.queues.html">pip_services3_mqtt.queues package</a> &raquo;</li>
+        
+      <li>pip_services3_mqtt.queues.MqttMessageQueue module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/pip_services3_mqtt.queues.MqttMessageQueue.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pip_services3_mqtt.queues.MqttMessageQueue">
+<span id="pip-services3-mqtt-queues-mqttmessagequeue-module"></span><h1>pip_services3_mqtt.queues.MqttMessageQueue module<a class="headerlink" href="#module-pip_services3_mqtt.queues.MqttMessageQueue" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="pip_services3_mqtt.queues.MqttMessageQueue.MqttMessageQueue">
+<em class="property">class </em><code class="sig-prename descclassname">pip_services3_mqtt.queues.MqttMessageQueue.</code><code class="sig-name descname">MqttMessageQueue</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_mqtt.queues.MqttMessageQueue.MqttMessageQueue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pip_services3_messaging.queues.MessageQueue.MessageQueue</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">pip_services3_commons.refer.IUnreferenceable.IUnreferenceable</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">pip_services3_commons.run.IOpenable.IOpenable</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">pip_services3_commons.run.ICleanable.ICleanable</span></code></p>
+<p>Message queue that sends and receives messages via MQTT message broker.</p>
+<p>MQTT is a popular light-weight protocol to communicate IoT devices.</p>
+<p>### Configuration parameters ###</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>topic:                         name of MQTT topic to subscribe</p></li>
+<li><dl class="simple">
+<dt>connection(s):</dt><dd><ul>
+<li><p>discovery_key:               (optional) a key to retrieve the connection from <code class="xref py py-class docutils literal notranslate"><span class="pre">IDiscovery</span></code></p></li>
+<li><p>host:                        host name or IP address</p></li>
+<li><p>port:                        port number</p></li>
+<li><p>uri:                         resource URI or connection string with all parameters in it</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>credential(s):</dt><dd><ul>
+<li><p>store_key:                   (optional) a key to retrieve the credentials from <code class="xref py py-class docutils literal notranslate"><span class="pre">ICredentialStore</span></code></p></li>
+<li><p>username:                    user name</p></li>
+<li><p>password:                    user password</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>options:</dt><dd><ul>
+<li><p>serialize_envelope:   (optional) true to serialize entire message as JSON, false to send only message payload (default: true)</p></li>
+<li><p>autosubscribe:        (optional) true to automatically subscribe on option (default: false)</p></li>
+<li><p>qos:                  (optional) quality of service level aka QOS (default: 0)</p></li>
+<li><p>retain:               (optional) retention flag for published messages (default: false)</p></li>
+<li><p>retry_connect:        (optional) turns on/off automated reconnect when connection is log (default: true)</p></li>
+<li><p>connect_timeout:      (optional) number of milliseconds to wait for connection (default: 30000)</p></li>
+<li><p>reconnect_timeout:    (optional) number of milliseconds to wait on each reconnection attempt (default: 1000)</p></li>
+<li><p>keepalive_timeout:    (optional) number of milliseconds to ping broker while inactive (default: 3000)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+<p>### References ###</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><em>:logger:</em>:<a href="#id1"><span class="problematic" id="id2">*</span></a>:1.0              (optional) <code class="xref py py-class docutils literal notranslate"><span class="pre">ILogger</span></code> components to pass log messages</p></li>
+<li><p><em>:counters:</em>:<a href="#id3"><span class="problematic" id="id4">*</span></a>:1.0            (optional) <code class="xref py py-class docutils literal notranslate"><span class="pre">ICounters</span></code> components to pass collected measurements</p></li>
+<li><p><em>:discovery:</em>:<a href="#id5"><span class="problematic" id="id6">*</span></a>:1.0           (optional) <code class="xref py py-class docutils literal notranslate"><span class="pre">IDiscovery</span></code> services to resolve connections</p></li>
+<li><p><em>:credential-store:</em>:<a href="#id7"><span class="problematic" id="id8">*</span></a>:1.0    (optional) Credential stores to resolve credentials</p></li>
+<li><p><em>:connection:mqtt:</em>:1.0       (optional) Shared connection to MQTT service</p></li>
+</ul>
+</div></blockquote>
+<p>See: <code class="xref py py-class docutils literal notranslate"><span class="pre">MessageQueue</span></code>,
+<code class="xref py py-class docutils literal notranslate"><span class="pre">MessagingCapabilities</span></code></p>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">queue</span> <span class="o">=</span> <span class="n">MqttMessageQueue</span><span class="p">(</span><span class="s2">&quot;myqueue&quot;</span><span class="p">)</span>
+
+<span class="n">queue</span><span class="o">.</span><span class="n">configure</span><span class="p">(</span><span class="n">ConfigParams</span><span class="o">.</span><span class="n">from_tuples</span><span class="p">(</span>
+    <span class="s2">&quot;topic&quot;</span><span class="p">,</span> <span class="s2">&quot;mytopic&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;connection.protocol&#39;</span><span class="p">,</span> <span class="s1">&#39;mqtt&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;connection.host&quot;</span><span class="p">,</span> <span class="s2">&quot;localhost&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;connection.port&quot;</span><span class="p">,</span> <span class="mi">1883</span>
+<span class="p">))</span>
+
+<span class="n">queue</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;123&quot;</span><span class="p">)</span>
+<span class="n">queue</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;123&quot;</span><span class="p">,</span> <span class="n">MessageEnvelope</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;mymessage&quot;</span><span class="p">,</span> <span class="s2">&quot;ABC&quot;</span><span class="p">))</span>
+<span class="n">message</span> <span class="o">=</span> <span class="n">queue</span><span class="o">.</span><span class="n">receive</span><span class="p">(</span><span class="s2">&quot;123&quot;</span><span class="p">,</span> <span class="mi">10000</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="py method">
+<dt id="pip_services3_mqtt.queues.MqttMessageQueue.MqttMessageQueue.abandon">
+<code class="sig-name descname">abandon</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_mqtt.queues.MqttMessageQueue.MqttMessageQueue.abandon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returnes message into the queue and makes it available for all subscribers to receive it again.
+This method is usually used to return a message which could not be processed at the moment
+to repeat the attempt. Messages that cause unrecoverable errors shall be removed permanently
+or/and send to dead letter queue.</p>
+<p>Important: This method is not supported by MQTT.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>message</strong> – a message to return.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pip_services3_mqtt.queues.MqttMessageQueue.MqttMessageQueue.clear">
+<code class="sig-name descname">clear</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_mqtt.queues.MqttMessageQueue.MqttMessageQueue.clear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clears component state.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>correlation_id</strong> – (optional) transaction id to trace execution through call chain.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pip_services3_mqtt.queues.MqttMessageQueue.MqttMessageQueue.close">
+<code class="sig-name descname">close</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_mqtt.queues.MqttMessageQueue.MqttMessageQueue.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Closes component and frees used resources.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>correlation_id</strong> – (optional) transaction id to trace execution through call chain.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pip_services3_mqtt.queues.MqttMessageQueue.MqttMessageQueue.complete">
+<code class="sig-name descname">complete</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_mqtt.queues.MqttMessageQueue.MqttMessageQueue.complete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Permanently removes a message from the queue.
+This method is usually used to remove the message after successful processing.</p>
+<p>Important: This method is not supported by MQTT.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>message</strong> – a message to remove.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pip_services3_mqtt.queues.MqttMessageQueue.MqttMessageQueue.configure">
+<code class="sig-name descname">configure</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span><span class="p">:</span> <span class="n">pip_services3_commons.config.ConfigParams.ConfigParams</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_mqtt.queues.MqttMessageQueue.MqttMessageQueue.configure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configures object by passing configuration parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>config</strong> – configuration parameters to be set.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pip_services3_mqtt.queues.MqttMessageQueue.MqttMessageQueue.end_listen">
+<code class="sig-name descname">end_listen</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_mqtt.queues.MqttMessageQueue.MqttMessageQueue.end_listen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ends listening for incoming messages.
+When this method is call <cite>listen</cite> unblocks the thread and execution continues.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>correlation_id</strong> – (optional) transaction id to trace execution through call chain.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pip_services3_mqtt.queues.MqttMessageQueue.MqttMessageQueue.is_open">
+<code class="sig-name descname">is_open</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pip_services3_mqtt.queues.MqttMessageQueue.MqttMessageQueue.is_open" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the component is opened.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>true if the component has been opened and false otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pip_services3_mqtt.queues.MqttMessageQueue.MqttMessageQueue.listen">
+<code class="sig-name descname">listen</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">receiver</span><span class="p">:</span> <span class="n">pip_services3_messaging.queues.IMessageReceiver.IMessageReceiver</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_mqtt.queues.MqttMessageQueue.MqttMessageQueue.listen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Listens for incoming messages and blocks the current thread until queue is closed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>correlation_id</strong> – (optional) transaction id to trace execution through call chain.</p></li>
+<li><p><strong>receiver</strong> – a receiver to receive incoming messages.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pip_services3_mqtt.queues.MqttMessageQueue.MqttMessageQueue.move_to_dead_letter">
+<code class="sig-name descname">move_to_dead_letter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_mqtt.queues.MqttMessageQueue.MqttMessageQueue.move_to_dead_letter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Permanently removes a message from the queue and sends it to dead letter queue.</p>
+<p>Important: This method is not supported by MQTT.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>message</strong> – a message to be removed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pip_services3_mqtt.queues.MqttMessageQueue.MqttMessageQueue.on_message">
+<code class="sig-name descname">on_message</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">topic</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">data</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="n">packet</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_mqtt.queues.MqttMessageQueue.MqttMessageQueue.on_message" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="pip_services3_mqtt.queues.MqttMessageQueue.MqttMessageQueue.open">
+<code class="sig-name descname">open</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_mqtt.queues.MqttMessageQueue.MqttMessageQueue.open" title="Permalink to this definition">¶</a></dt>
+<dd><p>Opens the component.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>correlation_id</strong> – (optional) transaction id to trace execution through call chain.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pip_services3_mqtt.queues.MqttMessageQueue.MqttMessageQueue.peek">
+<code class="sig-name descname">peek</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope<a class="headerlink" href="#pip_services3_mqtt.queues.MqttMessageQueue.MqttMessageQueue.peek" title="Permalink to this definition">¶</a></dt>
+<dd><p>Peeks a single incoming message from the queue without removing it.
+If there are no messages available in the queue it returns None.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>correlation_id</strong> – (optional) transaction id to trace execution through call chain.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a peeked message.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pip_services3_mqtt.queues.MqttMessageQueue.MqttMessageQueue.peek_batch">
+<code class="sig-name descname">peek_batch</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">message_count</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; List<span class="p">[</span>pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope<span class="p">]</span><a class="headerlink" href="#pip_services3_mqtt.queues.MqttMessageQueue.MqttMessageQueue.peek_batch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Peeks multiple incoming messages from the queue without removing them.
+If there are no messages available in the queue it returns an empty list.</p>
+<p>Important: This method is not supported by MQTT.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>correlation_id</strong> – (optional) transaction id to trace execution through call chain.</p></li>
+<li><p><strong>message_count</strong> – a maximum number of messages to peek.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a list with peeked messages.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pip_services3_mqtt.queues.MqttMessageQueue.MqttMessageQueue.read_message_count">
+<code class="sig-name descname">read_message_count</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pip_services3_mqtt.queues.MqttMessageQueue.MqttMessageQueue.read_message_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads the current number of messages in the queue to be delivered.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>number of available messages.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pip_services3_mqtt.queues.MqttMessageQueue.MqttMessageQueue.receive">
+<code class="sig-name descname">receive</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">wait_timeout</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope<a class="headerlink" href="#pip_services3_mqtt.queues.MqttMessageQueue.MqttMessageQueue.receive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Receives an incoming message and removes it from the queue.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>correlation_id</strong> – (optional) transaction id to trace execution through call chain.</p></li>
+<li><p><strong>wait_timeout</strong> – a timeout in milliseconds to wait for a message to come.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a received message.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pip_services3_mqtt.queues.MqttMessageQueue.MqttMessageQueue.renew_lock">
+<code class="sig-name descname">renew_lock</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope</span></em>, <em class="sig-param"><span class="n">lock_timeout</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_mqtt.queues.MqttMessageQueue.MqttMessageQueue.renew_lock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Renews a lock on a message that makes it invisible from other receivers in the queue.
+This method is usually used to extend the message processing time.</p>
+<p>Important: This method is not supported by MQTT.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>message</strong> – a message to extend its lock.</p></li>
+<li><p><strong>lock_timeout</strong> – a locking timeout in milliseconds.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pip_services3_mqtt.queues.MqttMessageQueue.MqttMessageQueue.send">
+<code class="sig-name descname">send</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_mqtt.queues.MqttMessageQueue.MqttMessageQueue.send" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sends a message into the queue.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>correlation_id</strong> – (optional) transaction id to trace execution through call chain.</p></li>
+<li><p><strong>message</strong> – a message envelop to be sent.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pip_services3_mqtt.queues.MqttMessageQueue.MqttMessageQueue.set_references">
+<code class="sig-name descname">set_references</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">references</span><span class="p">:</span> <span class="n">pip_services3_commons.refer.IReferences.IReferences</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_mqtt.queues.MqttMessageQueue.MqttMessageQueue.set_references" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets references to dependent components.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>references</strong> – references to locate the component dependencies.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pip_services3_mqtt.queues.MqttMessageQueue.MqttMessageQueue.unset_references">
+<code class="sig-name descname">unset_references</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_mqtt.queues.MqttMessageQueue.MqttMessageQueue.unset_references" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unsets (clears) previously set references to dependent components.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="pip_services3_mqtt.queues.html" class="btn btn-neutral float-left" title="pip_services3_mqtt.queues package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Sergey Seroukhov.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

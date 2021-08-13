@@ -1,0 +1,18 @@
+pip\_services3\_mqtt.queues package
+===================================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   pip_services3_mqtt.queues.MqttMessageQueue
+
+Module contents
+---------------
+
+.. automodule:: pip_services3_mqtt.queues
+   :members:
+   :undoc-members:
+   :show-inheritance:

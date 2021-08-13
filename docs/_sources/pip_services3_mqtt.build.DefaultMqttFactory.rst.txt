@@ -1,0 +1,7 @@
+pip\_services3\_mqtt.build.DefaultMqttFactory module
+====================================================
+
+.. automodule:: pip_services3_mqtt.build.DefaultMqttFactory
+   :members:
+   :undoc-members:
+   :show-inheritance:

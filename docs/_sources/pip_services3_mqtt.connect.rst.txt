@@ -1,0 +1,21 @@
+pip\_services3\_mqtt.connect package
+====================================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   pip_services3_mqtt.connect.IMqttMessageListener
+   pip_services3_mqtt.connect.MqttConnection
+   pip_services3_mqtt.connect.MqttConnectionResolver
+   pip_services3_mqtt.connect.MqttSubscription
+
+Module contents
+---------------
+
+.. automodule:: pip_services3_mqtt.connect
+   :members:
+   :undoc-members:
+   :show-inheritance:

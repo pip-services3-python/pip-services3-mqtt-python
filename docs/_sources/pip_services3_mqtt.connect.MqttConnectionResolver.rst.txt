@@ -1,0 +1,7 @@
+pip\_services3\_mqtt.connect.MqttConnectionResolver module
+==========================================================
+
+.. automodule:: pip_services3_mqtt.connect.MqttConnectionResolver
+   :members:
+   :undoc-members:
+   :show-inheritance:

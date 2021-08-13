@@ -1,0 +1,7 @@
+pip\_services3\_mqtt.queues.MqttMessageQueue module
+===================================================
+
+.. automodule:: pip_services3_mqtt.queues.MqttMessageQueue
+   :members:
+   :undoc-members:
+   :show-inheritance:

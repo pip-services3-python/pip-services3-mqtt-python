@@ -1,0 +1,20 @@
+pip\_services3\_mqtt package
+============================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   pip_services3_mqtt.build
+   pip_services3_mqtt.connect
+   pip_services3_mqtt.queues
+
+Module contents
+---------------
+
+.. automodule:: pip_services3_mqtt
+   :members:
+   :undoc-members:
+   :show-inheritance:
