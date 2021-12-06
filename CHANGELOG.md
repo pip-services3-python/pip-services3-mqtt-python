@@ -5,6 +5,7 @@
 ### Features
 * Optimize imports
 * Update dependencies
+* Fixed compose uri for MqttConnectionResolver
 
 
 ## <a name="3.0.0"></a> 3.0.0 (2021-08-13)

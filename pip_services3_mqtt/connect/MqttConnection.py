@@ -141,7 +141,8 @@ class MqttConnection(IMessageQueueConnection, IReferenceable, IConfigurable, IOp
 
             def on_connect(client, user_data, flags, rc):
                 if rc == 0:
-                    self._logger.debug(correlation_id, "Connected to MQTT broker at " + options['uri'])
+                    uri = options.get('uri') or options.get('host') + str(options.get('port'))
+                    self._logger.debug(correlation_id, "Connected to MQTT broker at " + uri)
                 else:
                     raise ConnectionException(correlation_id, "CONNECT_FAILED",
                                               f"Connection to MQTT broker failed, return code {rc}")

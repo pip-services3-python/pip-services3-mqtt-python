@@ -100,7 +100,7 @@ class MqttConnectionResolver(IReferenceable, IConfigurable):
         options = connection.override(credential)
 
         # Compose uri
-        if options.get_as_string('uri') is None:
+        if options.get_as_nullable_string('uri') is None:
             protocol = connection.get_as_string_with_default("protocol", "mqtt")
             host = connection.get_host()
             port = connection.get_as_integer_with_default("port", 1883)
