@@ -22,7 +22,7 @@ except:
 
 setup(
     name='pip_services3_mqtt',
-    version='3.0.0',
+    version='3.0.1',
     url='http://github.com/pip-services3-python/pip-services3-mqtt-python',
     license='MIT',
     author='Conceptual Vision Consulting LLC',
@@ -38,9 +38,9 @@ setup(
         'pytest',
         'paho-mqtt',
 
-        'pip-services3-messaging',
-        'pip_services3_commons',
-        'pip_services3_components'
+        'pip-services3-messaging >= 3.1.1, < 4.0',
+        'pip_services3_commons  >= 3.3.10, < 4.0',
+        'pip_services3_components >= 3.5.4, < 4.0'
     ],
     classifiers=[
         'Development Status :: 4 - Beta',
