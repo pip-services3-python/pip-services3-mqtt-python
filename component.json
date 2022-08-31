@@ -1,5 +1,5 @@
 {
-    "name":  "pip_services3_mqtt",
+    "name":  "pip-services3-mqtt",
     "type": "module",
     "language": "python",
     "version": "3.0.1",
